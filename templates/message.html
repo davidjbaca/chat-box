@@ -7,14 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
         integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <title>Chat Box | David Baca</title>
 </head>
 
 <body>
     <div class="messages">
+        <br>
+        <H1>What's on your mind?</H1>
+        
         <input placeholder="Message" id="messageInput" />
+    
     </div>
 
     <script>
@@ -24,7 +29,7 @@
 
         socket.on("connect", () => {
             let p = document.createElement("p")
-            p.innerText = "You're connected"
+            p.innerText = "You're online!"
             messageContainer.appendChild(p)
         })
 
